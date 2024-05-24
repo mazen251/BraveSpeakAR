@@ -31,8 +31,9 @@ What you need to install the software:
 # Clone the repo
 git clone https://github.com/Mstf000/BraveSpeakAR.git
 
-# Navigate to the project directory
+# Make sure you're in the project directory if not 
 cd BraveSpeakAR
+
 
 # Install NPM packages
 npm install
