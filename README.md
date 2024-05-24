@@ -28,18 +28,34 @@ What you need to install the software:
 ### Installation
 
 ```sh
-# Clone the repo
+# Clone the repository
 git clone https://github.com/Mstf000/BraveSpeakAR.git
-
-# Make sure you're in the project directory if not 
 cd BraveSpeakAR
 
+# Set up the Python environment
+# Open the project in PyCharm
+# Set up a virtual environment in PyCharm:
+# Go to File > Settings > Project: BraveSpeakAR > Python Interpreter.
+# Select an existing interpreter or create a new virtual environment.
+# Install the required Python libraries:
+pip install -r requirements.txt
 
-# Install NPM packages
+# Run the backend
+# In PyCharm, locate app.py in the project explorer.
+# Run app.py:
+# Right-click on app.py and select Run 'app'.
+# Alternatively, you can use the terminal:
+python app.py
+
+# Navigate to the client directory
+cd client
+
+# Install Node modules
 npm install
 
-# Start the development server
+# Start the frontend development server
 npm start
+
 ```
 ## Usage
 
