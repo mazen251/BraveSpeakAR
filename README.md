@@ -13,6 +13,26 @@ BraveSpeakAR aims to assist individuals in overcoming speech and language barrie
 - **Progress Tracking:** Monitor improvements and achievements through a user-friendly interface.
 - **Accessible Anywhere:** Use the application anywhere, anytime, without the need for specialized equipment.
 
+## UI/UX
+
+
+Here are some screenshots and mockups of the BraveSpeakAR application:
+
+### Login/SignUp Screen
+![Login/SignUp Screen](client/public/1.png)
+
+### Home Screen
+![Home Screen](client/public/2.png)
+
+### Patient CRUD Screen
+![Patient CRUD Screen](client/public/3.png)
+
+### Patient CRUD Screen (Dark Theme)
+![Dark Theme Charts Screen](client/public/4.png)
+
+### Charts Screen (Light Theme)
+![White Theme Charts Screen](client/public/5.png)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
