@@ -103,7 +103,7 @@ Mazen Walid - [@Mazen Walid](https://www.linkedin.com/in/mazen-walid-225582208/)
 In Progress Project Link: [https://github.com/Mstf000/BraveSpeakAR](https://github.com/Mstf000/BraveSpeakAR)
 
 Stable Version Till Now : https://github.com/mazen251/BraveSpeakAR
-## Acknowledgments
+
 
 
 
