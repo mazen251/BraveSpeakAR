@@ -49,7 +49,7 @@ What you need to install the software:
 
 ```sh
 # Clone the repository
-git clone https://github.com/Mstf000/BraveSpeakAR.git
+git clone https://github.com/mazen251/BraveSpeakAR-Website.git
 cd BraveSpeakAR
 
 # Set up the Python environment
@@ -79,7 +79,7 @@ npm start
 ```
 ## Usage
 
-TBE :)
+
 
 ## Contributing
 
@@ -91,19 +91,15 @@ We welcome contributions to BraveSpeakAR! If you have suggestions for improvemen
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
 ## Contact
 
-Mostafa Ameen - [@Mostafa Ameen](https://www.linkedin.com/in/mostafa-ameen-72511a1bb/)
 Mazen Walid - [@Mazen Walid](https://www.linkedin.com/in/mazen-walid-225582208/)
+Mostafa Ameen - [@Mostafa Ameen](https://www.linkedin.com/in/mostafa-ameen-72511a1bb/)
 
 In Progress Project Link: [https://github.com/Mstf000/BraveSpeakAR](https://github.com/Mstf000/BraveSpeakAR)
 
 Stable Version Till Now : https://github.com/mazen251/BraveSpeakAR
-## Acknowledgments
+
 
 
 
