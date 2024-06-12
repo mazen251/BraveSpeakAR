@@ -2,6 +2,8 @@ import Dashboard from "views/Dashboard.js";
 import Icons from "views/Icons.js";
 import TableList from "views/TableList.js";
 import WeightDistribution from "views/WeightDistribution.js";
+import Survey from "views/Survey.js";
+import UploadVideo from "views/UploadVideo.js";
 
 var routes = [
   {
@@ -19,24 +21,24 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/tables",
-    name: "weight distribution",
+    path: "/weight-distribution",
+    name: "Weight Distribution",
     icon: "tim-icons icon-chart-bar-32",
-    component: <TableList />,
+    component: <WeightDistribution />,
     layout: "/admin",
   },
   {
-    path: "/tables",
+    path: "/Survey",
     name: "Survey",
     icon: "tim-icons icon-notes",
-    component: <TableList />,
+    component: <Survey />,
     layout: "/admin",
   },
   {
-    path: "/tables",
+    path: "/upload-videos",
     name: "Video Upload",
     icon: "tim-icons icon-video-66",
-    component: <TableList />,
+    component: <UploadVideo />,
     layout: "/admin",
   },
 ];
