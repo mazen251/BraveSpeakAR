@@ -37,7 +37,7 @@ function WeightDistribution() {
     swal.fire({
       position: 'top-end',
       icon: 'success',
-      title: `Changes Appended`,
+      title: `Weights Changed Successfully`,
       showConfirmButton: false,
       timer: 1500,
     });
@@ -71,7 +71,7 @@ function WeightDistribution() {
                   </div>
                 </div>
                 <div className="text-center">
-                  <button className="btn btn-info mt-2" onClick={addUser}>Append Changes</button>
+                  <button className="btn btn-info mt-2" onClick={addUser}>Set Weights</button>
                 </div>
               </CardBody>
             </Card>
