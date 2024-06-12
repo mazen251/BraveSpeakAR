@@ -15,21 +15,26 @@ import swal from 'sweetalert2';
 
 function Survey() {
   const questions = [
-    "I feel nervous when I speak in front of a group of people.",
-    "I avoid social gatherings because they make me anxious.",
-    "I feel self-conscious in social situations.",
-    "I worry about being judged by others.",
-    "I feel uncomfortable when I have to introduce myself.",
-    "I get anxious when I have to speak to authority figures.",
-    "I avoid eye contact in social situations.",
-    "I feel like I am being watched in social situations.",
-    "I find it hard to speak up in meetings.",
-//    "I fear being the center of attention.",
-//    "I get anxious about meeting new people.",
-//    "I worry that people will notice my anxiety.",
-//    "I avoid starting conversations.",
-//    "I fear being negatively evaluated by others.",
-//    "I feel like I can't contribute to social conversations."
+    "1- I feel nervous when I speak in front of a group of people.",
+    "2- I avoid social gatherings because they make me anxious.",
+    "3- I feel self-conscious in social situations.",
+    "4- I worry about being judged by others.",
+    "5- I feel uncomfortable when I have to introduce myself.",
+    "6- I get anxious when I have to speak to authority figures.",
+    "7- I avoid eye contact in social situations.",
+    "8- I feel like I am being watched in social situations.",
+    "9- I find it hard to speak up in meetings.",
+    "10- I fear being the center of attention.",
+    "11- I get anxious about meeting new people.",
+    "12- I worry that people will notice my anxiety.",
+    "13- I avoid starting conversations.",
+    "14- I fear being negatively evaluated by others.",
+    "15- I feel like I can't contribute to social conversations.",
+    "16- I feel uncomfortable when I'm not engaged in a conversation.",
+    "17- I find it difficult to relax at social events.",
+    "18- I feel like I can't contribute to social conversations.",
+    "19- I find it difficult to relax at social events.",
+    "20- I feel uncomfortable when I'm not engaged in a conversation."
   ];
 
   const [responses, setResponses] = useState(Array(questions.length).fill(0));
@@ -40,9 +45,15 @@ function Survey() {
     setResponses(newResponses);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Perform any action with the responses, like sending to a server
+  const handleSubmit = (event) => {
+  event.preventDefault();
+  if (responses.some(response => response === 0)) {
+    swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Please answer all questions before proceeding!',
+    });
+  } else {
     console.log("Survey responses:", responses);
     swal.fire({
       position: 'top-end',
@@ -51,7 +62,8 @@ function Survey() {
       showConfirmButton: false,
       timer: 1500,
     });
-  };
+  }
+};
 
   return (
     <div className="content">
@@ -84,7 +96,9 @@ function Survey() {
                     </div>
                   </FormGroup>
                 ))}
-                <Button type="submit" color="info">Submit Survey</Button>
+                <div className="text-center">
+                  <Button color="info" type="submit">Submit Survey</Button>
+                </div>
               </form>
             </CardBody>
           </Card>
