@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import swal from 'sweetalert2';
 import {
@@ -26,13 +26,12 @@ function WeightDistribution() {
       swal.fire({
         position: 'top-end',
         icon: 'success',
-        title: `${username}'s Account Created`,
+        title: `Changes Appended`,
         showConfirmButton: false,
         timer: 1500,
       });
     } catch (error) {
       console.error('Error adding user:', error);
-      // Handle error appropriately in your UI
     }
   };
 
@@ -43,9 +42,9 @@ function WeightDistribution() {
           <Col md="12">
             <Card>
               <CardHeader>
-                <CardTitle tag="h4">Define Weight Distrubution Across Modalities</CardTitle>
-                 <div>
-                    <label>Total Wieght Must Be Equal 10</label>
+                <CardTitle tag="h4">Define Weight Distribution Across Modalities</CardTitle>
+                <div className="text-center"> {/* Centering the text */}
+                  <div style={{ color: 'red' }}>Total Weight Must Be Equal 10</div> {/* Making the text red colored */}
                 </div>
               </CardHeader>
               <CardBody>
@@ -63,7 +62,9 @@ function WeightDistribution() {
                     <input type="password" className="form-control" value={password} onChange={e => setPassword(e.target.value)} />
                   </div>
                 </div>
-                <button className="btn btn-info mt-2" onClick={addUser}>Append Changes</button>
+                <div className="text-center">
+                  <button className="btn btn-info mt-2" onClick={addUser}>Append Changes</button>
+                </div>
               </CardBody>
             </Card>
           </Col>
