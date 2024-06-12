@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import swal from 'sweetalert2';
 import {
   Card,
@@ -11,28 +10,37 @@ import {
 } from 'reactstrap';
 
 function WeightDistribution() {
-  const [password, setPassword] = useState('');
-  const [username, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [voiceStuttering, setVoiceStuttering] = useState('');
+  const [profiledMovements, setProfiledMovements] = useState('');
+  const [emotions, setEmotions] = useState('');
 
-  const addUser = async () => {
-    try {
-      const user = { username, email, password };
-      await axios.post('http://localhost:5000/add_user', user);
-      // Reset form
-      setPassword('');
-      setName('');
-      setEmail('');
+  const addUser = () => {
+    // Calculate the total weight
+    const totalWeight = parseInt(voiceStuttering) + parseInt(profiledMovements) + parseInt(emotions);
+
+    // Check if total weight is not exactly 10
+    if (totalWeight !== 10) {
       swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: `Changes Appended`,
-        showConfirmButton: false,
-        timer: 1500,
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Total weight must be exactly 10!',
       });
-    } catch (error) {
-      console.error('Error adding user:', error);
+      return; // Exit the function early
     }
+
+    // Reset input fields
+    setVoiceStuttering('');
+    setProfiledMovements('');
+    setEmotions('');
+
+    // Show success message
+    swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: `Changes Appended`,
+      showConfirmButton: false,
+      timer: 1500,
+    });
   };
 
   return (
@@ -43,7 +51,7 @@ function WeightDistribution() {
             <Card>
               <CardHeader>
                 <CardTitle tag="h4">Define Weight Distribution Across Modalities</CardTitle>
-                <div className="text-center"> {/* Centering the text */}
+                <div className="text-center">
                   <div style={{ color: 'red' }}>Total Weight Must Be Equal 10</div> {/* Making the text red colored */}
                 </div>
               </CardHeader>
@@ -51,15 +59,15 @@ function WeightDistribution() {
                 <div className="row">
                   <div className="col">
                     <label>Voice Stuttering</label>
-                    <input type="text" className="form-control" value={username} onChange={e => setName(e.target.value)} />
+                    <input type="text" className="form-control" value={voiceStuttering} onChange={e => setVoiceStuttering(e.target.value)} />
                   </div>
                   <div className="col">
                     <label>Profiled Movements</label>
-                    <input type="text" className="form-control" value={email} onChange={e => setEmail(e.target.value)} />
+                    <input type="text" className="form-control" value={profiledMovements} onChange={e => setProfiledMovements(e.target.value)} />
                   </div>
                   <div className="col">
                     <label>Emotions</label>
-                    <input type="password" className="form-control" value={password} onChange={e => setPassword(e.target.value)} />
+                    <input type="text" className="form-control" value={emotions} onChange={e => setEmotions(e.target.value)} />
                   </div>
                 </div>
                 <div className="text-center">
