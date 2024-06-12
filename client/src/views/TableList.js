@@ -79,7 +79,9 @@ function Tables() {
                     <input type="password" className="form-control" value={password} onChange={e => setPassword(e.target.value)} />
                   </div>
                 </div>
-                <button className="btn btn-info mt-2" onClick={addUser}>Add User </button>
+                <div className="text-center">
+                    <button className="btn btn-info mt-2" onClick={addUser}>Add User </button>
+                </div>
               </CardBody>
             </Card>
             <Card>
